@@ -1,0 +1,32 @@
+Aula 02
+
+Ordenar: Gera eficiência na pesquisa/Velocidade
+
+Pesquisar:  Localizar ou buscar um dado dentro de uma estrutura via chave.
+Recuperar: localizar ou buscar dados com relevância.
+Search/find - buscar/localizar/pesquisar.
+Retrieve - localizar ou buscar com relevância. (Não será abordado nesta disciplina)
+
+-Complexidade de um algoritmo: Quando de recurso ele aloca para realizar a sua tarefa.
+Alta Complexidade - Mais esforço
+Baixa Complexidade - Menos esforço
+
+Notação Big O -
+O(n!) = fatorial (Maior complexidade)
+O(h) Linear esforço contínuo. 
+O(nˆx) = exponencial 
+O(log n+n) 6/1,3 4/1,3 3/1,3 2/1,3 1 apenas verifica se houve troca.
+O(log h) = logaritmico (Menor complexidade)
+
+                              - Ordenação        - Pesquisa 
+Como medir a complexidade     Qtd Comparações    Qtd Comparações
+                              Qtd trocas.         Apenas. 
+
+Estabilidade - Quanto a estrutura vai da desordem até ordenação.
+Garante selo.
+
+Bubble Sort - Bolha estável - Segue um padrão.
+Comb sort - Pente - Instável - Bagunçam a estrutura para ordenar
+
+
+
