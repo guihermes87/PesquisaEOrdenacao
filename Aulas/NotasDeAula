@@ -7,16 +7,53 @@ Recuperar: localizar ou buscar dados com relevância.
 Search/find - buscar/localizar/pesquisar.
 Retrieve - localizar ou buscar com relevância. (Não será abordado nesta disciplina)
 
--Complexidade de um algoritmo: Quando de recurso ele aloca para realizar a sua tarefa.
+-Complexidade de um algoritmo: Quanto de recurso ele aloca para realizar a sua tarefa.
 Alta Complexidade - Mais esforço
 Baixa Complexidade - Menos esforço
 
-Notação Big O -
+- O que é ordenar: organizar uma estrutura de dados (cresc ou decresc) usando uma ou mais chaves de controles (variável)
+- Por que ordenar? porque estruturas ordenadas tem a busca ou a pesquisa mais eficiente, devido aos algoritmos baseados em árvores
+- Categorias de ordenação para os algoritmos
+    - memória interna ou memória externa
+    - estabilidade do algoritmo
+        estável: o processo de ordenação sempre garante a ordenação temporária da estrutura
+            [4,8,1,3,4,2]
+            [4,1,3,4,2,8]
+            [1,3,4,2,4,8]
+            [1,3,2,4,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+        
+        instável: o processo de ordenação não garante a ordenação temporária da estrutura
+            [4,8,1,3,4,2]
+            [1,8,4,3,4,2]
+            [1,2,4,3,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+            [1,2,3,4,4,8]
+            NÃO SÃO adequados para listas feitas em C ou C++ com alocação dinâmica de memória, como trabalhado na disciplina Estruturas de Dados
+ 
+
+Obs.: ao ordenar os algoritmos garantem porções ordenadas na estrutura:
+            - final
+            - frente
+            - nas extremidades (piramide invertida)
+
+Notação Big O 
 O(n!) = fatorial (Maior complexidade)
 O(h) Linear esforço contínuo. 
 O(nˆx) = exponencial 
 O(log n+n) 6/1,3 4/1,3 3/1,3 2/1,3 1 apenas verifica se houve troca.
 O(log h) = logaritmico (Menor complexidade)
+
+FATORIAL RESUMO
+
+ Categorias:
+                Complexidade fatorial       - O(n!)         - menos eficiente
+                Complexidade polinomial     - O(n^k) 
+                Complexidade Exponencial    - O(n^2)
+                Complexidade Linear         - O(n)
+                Complexidade Logaritmica    - O(log n)      - mais eficaz
 
                               - Ordenação        - Pesquisa 
 Como medir a complexidade     Qtd Comparações    Qtd Comparações
@@ -27,6 +64,27 @@ Garante selo.
 
 Bubble Sort - Bolha estável - Segue um padrão.
 Comb sort - Pente - Instável - Bagunçam a estrutura para ordenar
+
+
+Aula 03
+
+Modelo de Arquitetura a ser seguido
+
+M - Model 
+V - View
+C - Controller
+
+
+
+*  fazer um método que recebe uma lista e retorna True se está ordenado ou false, caso contrário.
+
+public static void exibir(List<Glicemia> lista) {
+        StringBuffer resultado = new StringBuffer();
+        for (Glicemia g : lista) {
+            resultado.append(g + "\n");
+        }
+        JOptionPane.showMessageDialog(null, resultado);
+    }
 
 
 
