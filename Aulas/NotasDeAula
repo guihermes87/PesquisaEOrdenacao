@@ -272,4 +272,29 @@ Contudo, diferente do QUICKSORT, o MERGESORT sempre divide a estrutura no meio (
         -> if (raiz * 2 + 1 < n && lista[raiz] < lista[raiz * 2 + 1]) { troca }
 
 
+AULA DIA 03/09
+
+ORDENAÇÃO = ORGANIZAÇÃO = OTIMIZAÇÃO DA PESQUISA
+
+Chave de Ordenação = Índice = Pode ser + de 1 = A classe precisa implementar Comparable.
+
+Complexidade = esforço = numero de comparações + trocas;
+
+Métodos Simples
+        Bolha -> Agitação -> Pente (Simples com alta complexidade)
+        Seleção
+        Inserção
+
+Como contar o esforço = Benchmark (Número de comparações, trocas e tempo)
+
+Métodos de Menor complexidade, porém mais difíceis de implementar. 
+MergeSort =   Merge = Recursivo (Composto por 2 métodos)
+              Intercalar = Retorno do empilhamento (recursão)
+OBS: O processo é baseado em divisões de estrutura recursivamente, sempre no meio.
+Dividindo até chegar em 2, sobe intercalando e ordenando cada nodo.
+
+QuickSort =   Quick = Recursivo (Composto por 2 métodos)
+              Posicionar = Ordenar o Pivô
+OBS: O processo é baseado em divisões de estrutura recursivamente, obdecendo a posição do pivô
+
 
