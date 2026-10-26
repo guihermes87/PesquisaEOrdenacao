@@ -15,13 +15,13 @@ public class Util
     }
 
  
-    public static void Medir(string nome, Action acao)
-    {
-        var sw = Stopwatch.StartNew();
-        acao();
-        sw.Stop();
-        Visualizacao.exibirTempo(sw, nome);
-    }
+    // public static void Medir(string nome, Action acao)
+    // {
+    //     var sw = Stopwatch.StartNew();
+    //     acao();
+    //     sw.Stop();
+    //     Visualizacao.exibirTempo(sw, nome);
+    // }
 
     public static void MedirTrocas(string nome, Func<long> acao)
     {

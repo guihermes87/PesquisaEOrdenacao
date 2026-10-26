@@ -1,0 +1,46 @@
+Pesquisa
+
+-dependente de ordenacao
+- quando a estrutura está desordenada, ha somente a pesquisa sequencial.
+
+técnicas de pesquisa:
+- pesquisa sequencial   - complexidade O(n)
+    - pesquisa binária - complexidade O(log n)
+        - baseada na teoria de árvore, porem a estrutura deve estar ordenada.
+        - retorna somente um elemento, caso ele esteja presente na estrutura.
+
+    pesquisa digital - complexidade O(log n)
+    
+    - ÁRVORES trie
+            - Estrutura de dados em árvore utilizada para armazenar um conjunto de strings.
+            - Permite buscas rápidas e eficientes, especialmente em aplicações de autocomplete e correção de texto.
+            - Cada nó da árvore representa um caractere de uma string, e o caminho da raiz até um nó representa a string formada pelos caracteres.
+    
+    - P.A.T.R.I.C.I.A
+
+        - P.A.T.R.I.C.I.A. (Prefix Automaton Tree with Recursive Insertion and Compressed Internal Arcs) é uma estrutura de dados que combina as características das árvores trie e dos autômatos finitos.
+        - É utilizada para realizar buscas eficientes em conjuntos de strings, permitindo operações como busca de prefixos e autocompletar.
+        - A P.A.T.R.I.C.I.A. é construída a partir de um conjunto de strings, onde cada string é representada por um caminho na árvore.
+
+        Eventos
+            Botão
+            Teclado
+                - KeyPressed
+                - KeyReleased
+                - KeyTyped
+            - Mouse
+                - Clicked
+                - Released
+
+HASH - FUNÇÃO DE DISPERSÃO/ESPALHAMENTO - complexidade O(1)
+    - Aplicado inicialmente em Discos Rígidos - FAT (File Allocation Table)
+    - Codigo armazenado em uma tabela hash, onde cada elemento é associado a um índice calculado pela função de hash.
+    - Tabela hash - estrutura de dados que armazenada os dados
+    - Função de hash - calculo de enderecamento para armazenar os dados na tabela hash.
+    - Tipos de tratamentos de colisões - 
+        - Listas encadeadas - 
+            - Tipos de hash - Open Addressing (endereçamento aberto) e Closed Addressing (endereçamento fechado)
+
+    - Função que mapeia dados de entrada para um valor fixo, geralmente usado em tabelas hash.
+    - Permite acesso rápido a elementos, reduzindo o tempo de busca.
+    - Pode gerar colisões, onde diferentes entradas produzem o mesmo valor de hash.

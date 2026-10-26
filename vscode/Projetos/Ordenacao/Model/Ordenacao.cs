@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 
- public class Ordenacao {
+namespace Model;
+
+public class Ordenacao {
+
     public static long agitacao(List<long> lista)
     {
         bool houveTroca;
@@ -95,4 +98,32 @@ using System.Collections.Generic;
 
         return qttrocas;
     }
+
+    public static long pente(List<long> lista) {
+    bool houveTroca;
+    long tmp;
+    int distancia = lista.Count;
+    int qtdComparacoes = 0, qtdTrocas = 0;
+
+    do {
+        distancia = (int)(distancia / 1.3);
+        if (distancia < 1) {
+            distancia = 1;
+        }
+        houveTroca = false;
+        for (int i = 0; i < lista.Count - distancia; i++){
+            qtdComparacoes++;
+            if (lista[i] > lista[i+distancia]) {
+                qtdTrocas++;
+                houveTroca = true;
+                tmp = lista[i];
+                lista[i] = lista[i+distancia];
+                lista[i+distancia] = tmp;
+            }
+        }
+    } while (houveTroca || distancia > 1);
+
+    return qtdTrocas;
+}
+
 }

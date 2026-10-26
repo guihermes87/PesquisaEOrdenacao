@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Model;
 
 
 public class Visualizacao
@@ -10,6 +11,14 @@ public class Visualizacao
         foreach (var item in lista)
         {
             Console.WriteLine(item.ToString());
+        }
+    }
+
+    public static void exibir(List<Processo> lista)
+    {
+        foreach (var item in lista)
+        {
+            Console.WriteLine($"Id: {item.Id}, Data: {item.Data:d}");
         }
     }
 
