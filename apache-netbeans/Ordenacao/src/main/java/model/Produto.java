@@ -1,22 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
+
+import java.time.LocalDate;
 import java.util.Objects;
-import java.util.localDate;
 
 /**
+ * Produto com descrição, código e data, usado no exemplo de ordenação por data.
  *
  * @author hermes
  */
-
-
 public class Produto {
-    
-    String produto;
-    int codigo;
-    LocalDate data;
+
+    private String produto;
+    private int codigo;
+    private LocalDate data;
+
+    public Produto(String produto, int codigo, LocalDate data) {
+        this.produto = produto;
+        this.codigo = codigo;
+        this.data = data;
+    }
 
     public String getProduto() {
         return produto;
@@ -42,10 +44,9 @@ public class Produto {
         this.data = data;
     }
 
-    public Produto(String produto, int codigo, LocalDate data) {
-        this.produto = produto;
-        this.codigo = codigo;
-        this.data = data;
+    @Override
+    public String toString() {
+        return String.format("%-16s | código %3d | %s", produto, codigo, data);
     }
 
     @Override
@@ -62,25 +63,12 @@ public class Produto {
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
         final Produto other = (Produto) obj;
-        if (this.codigo != other.codigo) {
-            return false;
-        }
-        if (!Objects.equals(this.produto, other.produto)) {
-            return false;
-        }
-        return Objects.equals(this.data, other.data);
+        return this.codigo == other.codigo
+                && Objects.equals(this.produto, other.produto)
+                && Objects.equals(this.data, other.data);
     }
-    
-    
-    
-    
-    
-    
 }

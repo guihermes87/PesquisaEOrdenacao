@@ -1,11 +1,16 @@
+package pesquisaeordenacao2;
 
 import java.util.Objects;
-import java.util.ArrayList;
 
-public class Pessoa  implements Comparable<Pessoa>{
-    
-    String nome;
-    int idade;
+/**
+ * Pessoa com ordem natural definida por Comparable: primeiro pelo nome, depois pela idade.
+ *
+ * @author hermes
+ */
+public class Pessoa implements Comparable<Pessoa> {
+
+    private String nome;
+    private int idade;
 
     public Pessoa(String nome, int idade) {
         this.nome = nome;
@@ -28,6 +33,18 @@ public class Pessoa  implements Comparable<Pessoa>{
         this.idade = idade;
     }
 
+    /**
+     * Ordem natural: nome em ordem alfabética; em caso de empate, idade crescente.
+     */
+    @Override
+    public int compareTo(Pessoa outra) {
+        int porNome = this.nome.compareTo(outra.nome);
+        if (porNome != 0) {
+            return porNome;
+        }
+        return Integer.compare(this.idade, outra.idade);
+    }
+
     @Override
     public String toString() {
         return "Pessoa{" + "nome=" + nome + ", idade=" + idade + '}';
@@ -46,22 +63,10 @@ public class Pessoa  implements Comparable<Pessoa>{
         if (this == obj) {
             return true;
         }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
         final Pessoa other = (Pessoa) obj;
-        if (this.idade != other.idade) {
-            return false;
-        }
-        return Objects.equals(this.nome, other.nome);
+        return this.idade == other.idade && Objects.equals(this.nome, other.nome);
     }
-    
-    
-    
-    
-    
-    
 }
