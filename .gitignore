@@ -1,0 +1,8 @@
+.DS_Store
+build/
+dist/
+nbproject/private/
+bin/
+obj/
+target/
+node_modules/
